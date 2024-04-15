@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif; /*Use Poppins if available otherwise use sans-serig*/
+  box-sizing: border-box; /* as the name suggest box-sizing refers to every element(box)...it specifies how the height and width of the box(element/tag) is calculated...border-bbox means we include padding and border in the calculation of height and width of the element */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: transparent;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px; /*top-bottom and left-right*/
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-positon: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5x;
+  height: 40px;
+  width: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #1e1e3f;
+  color: #ffffff;
+}
+
+.counter {
+  margin-left: 25%;
+  font-weight: light;
+}
+
+.count {
+  color: rgb(206, 25, 25);
+  font-weight: bold;
+}
+
+#list-container li {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 5px rgba(105, 190, 0, 0.838);
+}
+
+.cross {
+  position: absolute;
+  top: 2px;
+}
